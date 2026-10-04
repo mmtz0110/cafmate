@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { sessions as allSessions } from "../data/marketplaceSessions.js";
 import MarketplaceCatalog from "./MarketplaceCatalog.jsx";
 import { MarketplaceSidebar, MarketplaceTopbar } from "./MarketplaceChrome.jsx";
@@ -37,9 +38,12 @@ function WelcomeSummary() {
               92 <em>/ 100</em>
             </strong>
           </span>
-          <a href="#reputasi" aria-label="Lihat detail reliability score">
+          <Link
+            to="/dashboard/reputation"
+            aria-label="Lihat detail reliability score"
+          >
             ↗
-          </a>
+          </Link>
         </div>
       </section>
       <section
@@ -65,9 +69,9 @@ function WelcomeSummary() {
             <strong>wilayah Bandung</strong>
           </p>
         </div>
-        <a href="#marketplace" className="banner-link">
+        <Link to="/dashboard/savings" className="banner-link">
           Lihat ringkasan <span>↗</span>
-        </a>
+        </Link>
       </section>
       <section className="session-overview" aria-label="Ringkasan sesi belanja">
         <div>

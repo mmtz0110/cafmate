@@ -219,6 +219,9 @@
   border: 1px solid #e6e8e1;
   background: #fff;
   color: #555d52;
+  display: grid;
+  place-items: center;
+  text-decoration: none;
   cursor: pointer;
 }
 .notification-button > span,
@@ -1090,5 +1093,381 @@
   }
   .market-footer {
     font-size: 7px;
+  }
+}
+
+.placeholder-main {
+  min-width: 0;
+  min-height: 100vh;
+  background: #f7f7f4;
+}
+.placeholder-topbar {
+  height: 76px;
+  padding: 0 5%;
+  border-bottom: 1px solid #e8e9e3;
+  background: #fbfbf8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.placeholder-back {
+  color: #3f6045;
+  font-size: 11px;
+  font-weight: 700;
+}
+.placeholder-back span {
+  margin-left: 7px;
+}
+.placeholder-content {
+  width: min(900px, 100%);
+  margin: 0 auto;
+  padding: 64px 5%;
+}
+.placeholder-content h1 {
+  margin: 0;
+  font: 700 clamp(30px, 4vw, 42px)/1.15 var(--display);
+  letter-spacing: -0.055em;
+}
+.placeholder-description {
+  max-width: 540px;
+  margin: 13px 0 28px;
+  color: #747a70;
+  font-size: 14px;
+  line-height: 1.7;
+}
+.placeholder-panel {
+  max-width: 620px;
+  padding: 27px;
+  border: 1px solid #e5e8e0;
+  background: #fbfbf8;
+}
+.placeholder-symbol {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: #edf1e3;
+  color: #657c4c;
+  font-size: 19px;
+}
+.placeholder-panel strong {
+  display: block;
+  margin-top: 18px;
+  font: 700 18px var(--display);
+}
+.placeholder-panel p {
+  max-width: 490px;
+  margin: 8px 0 19px;
+  color: #747a70;
+  font-size: 12px;
+  line-height: 1.7;
+}
+@media (min-width: 761px) {
+  .marketplace-app {
+    grid-template-columns: 264px minmax(0, 1fr);
+  }
+  .market-sidebar {
+    padding: 30px 20px 18px;
+  }
+  .market-brand {
+    padding-bottom: 38px;
+    font-size: 15px;
+  }
+  .sidebar-link {
+    min-height: 46px;
+    gap: 12px;
+    font-size: 13px;
+  }
+  .workspace-label {
+    font-size: 10px;
+  }
+  .market-topbar {
+    height: 76px;
+  }
+  .breadcrumb {
+    font-size: 12px;
+  }
+  .global-search {
+    width: min(290px, 30vw);
+    height: 40px;
+  }
+  .global-search input {
+    font-size: 12px;
+  }
+  .global-search kbd {
+    font-size: 9px;
+  }
+  .notification-button,
+  .basket-button {
+    width: 40px;
+    height: 40px;
+  }
+  .market-content {
+    padding-top: 42px;
+    padding-bottom: 30px;
+  }
+  .market-eyebrow {
+    font-size: 9px;
+  }
+  .welcome-row h1 {
+    font-size: clamp(28px, 2.8vw, 36px);
+  }
+  .welcome-copy {
+    font-size: 12px;
+  }
+  .reliability {
+    min-width: 218px;
+    padding: 15px 17px;
+  }
+  .reliability small {
+    font-size: 8px;
+  }
+  .reliability strong {
+    font-size: 18px;
+  }
+  .savings-banner {
+    min-height: 112px;
+    padding: 20px 24px;
+    gap: 18px;
+  }
+  .savings-icon {
+    width: 44px;
+    height: 44px;
+    font-size: 21px;
+  }
+  .savings-message small {
+    font-size: 8px;
+  }
+  .savings-message strong {
+    font-size: 22px;
+  }
+  .savings-message > span {
+    font-size: 9px;
+  }
+  .savings-note p {
+    font-size: 9px;
+  }
+  .banner-link {
+    font-size: 10px;
+  }
+  .session-overview {
+    margin-block: 25px 34px;
+    padding-block: 16px;
+  }
+  .session-overview > div {
+    font-size: 11px;
+  }
+  .session-overview strong {
+    font-size: 15px;
+  }
+  .catalog-heading h2 {
+    font-size: 23px;
+  }
+  .catalog-heading h2 span {
+    font-size: 9px;
+  }
+  .catalog-toolbar {
+    margin-block: 19px 20px;
+  }
+  .filter-chip {
+    min-height: 36px;
+    padding-inline: 13px;
+    font-size: 10px;
+  }
+  .filter-button {
+    min-height: 36px;
+    font-size: 10px;
+  }
+  .sort-control {
+    padding: 9px 11px;
+    font-size: 10px;
+  }
+  .sort-control select {
+    font-size: 10px;
+  }
+  .market-product-grid {
+    gap: 17px;
+  }
+  .market-product-art {
+    height: 174px;
+  }
+  .market-product-badge {
+    font-size: 8px;
+  }
+  .market-product-icon {
+    width: 88px;
+    height: 88px;
+    font-size: 44px;
+  }
+  .market-product-body {
+    padding: 16px;
+  }
+  .market-product-meta {
+    font-size: 9px;
+  }
+  .market-product-body h3 {
+    margin-block: 9px 12px;
+    font-size: 15px;
+  }
+  .market-price-line strong {
+    font-size: 17px;
+  }
+  .market-price-line del {
+    font-size: 9px;
+  }
+  .discount-line,
+  .discount-line strong {
+    font-size: 9px;
+  }
+  .moq-heading {
+    margin-top: 18px;
+    font-size: 10px;
+  }
+  .moq-heading strong,
+  .moq-foot {
+    font-size: 9px;
+  }
+  .join-session {
+    min-height: 40px;
+    margin-top: 14px;
+    font-size: 11px;
+  }
+  .market-footer {
+    margin-top: 28px;
+    padding-top: 17px;
+    font-size: 9px;
+  }
+  .workspace-user strong {
+    font-size: 11px;
+  }
+  .workspace-user small {
+    font-size: 9px;
+  }
+}
+@media (min-width: 761px) and (max-width: 1080px) {
+  .marketplace-app {
+    grid-template-columns: 220px minmax(0, 1fr);
+  }
+}
+
+.marketplace-app :focus-visible,
+.placeholder-main :focus-visible {
+  outline: 2px solid #547b4b;
+  outline-offset: 3px;
+}
+
+@media (max-width: 760px) {
+  .market-topbar {
+    height: 60px;
+  }
+  .breadcrumb {
+    font-size: 11px;
+  }
+  .global-search {
+    height: 38px;
+  }
+  .global-search input {
+    font-size: 11px;
+  }
+  .notification-button,
+  .basket-button {
+    width: 36px;
+    height: 36px;
+  }
+  .market-content {
+    padding-top: 31px;
+  }
+  .market-eyebrow {
+    font-size: 8px;
+  }
+  .welcome-row h1 {
+    font-size: 28px;
+  }
+  .welcome-copy {
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  .reliability small {
+    font-size: 7px;
+  }
+  .savings-message small {
+    font-size: 7px;
+  }
+  .savings-message strong {
+    font-size: 18px;
+  }
+  .savings-message > span {
+    font-size: 9px;
+  }
+  .session-overview > div {
+    font-size: 8px;
+  }
+  .filter-chip {
+    min-height: 34px;
+    font-size: 9px;
+  }
+  .market-product-body h3 {
+    font-size: 13px;
+  }
+  .market-price-line strong {
+    font-size: 14px;
+  }
+  .discount-line,
+  .discount-line strong {
+    font-size: 8px;
+  }
+  .moq-heading {
+    font-size: 8px;
+  }
+  .moq-foot {
+    font-size: 7px;
+  }
+  .join-session {
+    min-height: 36px;
+    font-size: 9px;
+  }
+  .placeholder-topbar {
+    height: 60px;
+    padding-inline: 18px;
+  }
+  .placeholder-content {
+    padding: 42px 20px;
+  }
+  .placeholder-description {
+    font-size: 13px;
+  }
+  .placeholder-panel {
+    padding: 21px;
+  }
+}
+@media (max-width: 480px) {
+  .notification-button,
+  .basket-button {
+    width: 32px;
+    height: 32px;
+  }
+  .market-content {
+    padding-inline: 14px;
+  }
+  .session-overview {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 8px;
+  }
+  .session-overview > div {
+    font-size: 8px;
+  }
+  .market-product-art {
+    min-height: 238px;
+  }
+  .market-product-body {
+    padding-inline: 12px;
+  }
+  .market-product-meta {
+    font-size: 8px;
+  }
+  .market-price-line strong {
+    font-size: 13px;
   }
 }

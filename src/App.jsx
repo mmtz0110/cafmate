@@ -9,6 +9,7 @@ import {
 } from "./components/Sections.jsx";
 import SiteFooter from "./components/SiteFooter.jsx";
 import MarketplaceDashboard from "./components/MarketplaceDashboard.jsx";
+import DashboardPlaceholder from "./components/DashboardPlaceholder.jsx";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function LandingPage() {
@@ -51,6 +52,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/marketplace" element={<MarketplaceDashboard />} />
+        <Route path="/dashboard/:section" element={<DashboardPlaceholder />} />
         <Route path="*" element={<LandingPage />} />
       </Routes>
     </BrowserRouter>

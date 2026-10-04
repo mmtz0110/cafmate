@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 export function MarketplaceSidebar() {
   return (
@@ -15,23 +15,39 @@ export function MarketplaceSidebar() {
       </Link>
       <div className="workspace-label">WORKSPACE</div>
       <nav className="sidebar-nav" aria-label="Menu dashboard">
-        <a className="sidebar-link" href="#ringkasan">
+        <NavLink
+          className={({ isActive }) =>
+            `sidebar-link${isActive ? " active" : ""}`
+          }
+          to="/dashboard/overview"
+        >
           <span aria-hidden="true">⌂</span>Ringkasan
-        </a>
-        <a
-          className="sidebar-link active"
-          href="#marketplace"
-          aria-current="page"
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            `sidebar-link${isActive ? " active" : ""}`
+          }
+          to="/marketplace"
         >
           <span aria-hidden="true">▦</span>Marketplace
-        </a>
-        <a className="sidebar-link" href="#pesanan">
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            `sidebar-link${isActive ? " active" : ""}`
+          }
+          to="/dashboard/orders"
+        >
           <span aria-hidden="true">▤</span>Pesanan saya
           <span className="nav-count">2</span>
-        </a>
-        <a className="sidebar-link" href="#favorit">
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            `sidebar-link${isActive ? " active" : ""}`
+          }
+          to="/dashboard/favorites"
+        >
           <span aria-hidden="true">♡</span>Favorit
-        </a>
+        </NavLink>
       </nav>
       <div className="sidebar-help">
         <span className="help-icon" aria-hidden="true">
@@ -43,7 +59,7 @@ export function MarketplaceSidebar() {
           Hubungi tim <span>↗</span>
         </a>
       </div>
-      <button className="workspace-user" type="button">
+      <Link className="workspace-user" to="/dashboard/profile">
         <span className="user-avatar" aria-hidden="true">
           KP
         </span>
@@ -54,7 +70,7 @@ export function MarketplaceSidebar() {
         <span className="user-menu" aria-hidden="true">
           ···
         </span>
-      </button>
+      </Link>
     </aside>
   );
 }
@@ -78,22 +94,22 @@ export function MarketplaceTopbar({ search, onSearch, joinedCount }) {
           />
           <kbd>⌘ K</kbd>
         </label>
-        <button
+        <Link
           className="notification-button"
-          type="button"
+          to="/dashboard/notifications"
           aria-label="Notifikasi, 2 belum dibaca"
         >
           <span aria-hidden="true">♧</span>
           <i />
-        </button>
-        <button
+        </Link>
+        <Link
           className="basket-button"
-          type="button"
+          to="/dashboard/cart"
           aria-label={`Sesi pilihan, ${joinedCount} item`}
         >
           <span aria-hidden="true">▱</span>
           {joinedCount > 0 && <b>{joinedCount}</b>}
-        </button>
+        </Link>
       </div>
     </header>
   );
